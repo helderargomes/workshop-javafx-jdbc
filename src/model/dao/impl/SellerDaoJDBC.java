@@ -128,9 +128,9 @@ public class SellerDaoJDBC implements SellerDao {
 		} finally {
 			DB.closeStatement(st);
 			DB.closeResultSet(rs);
-			// Não fecha a conexão, pois o DAO pode ser
-			// utilizado mais de uma vez na mesma operação.
-			// A conexão será fechada no Programa.
+			// Nï¿½o fecha a conexï¿½o, pois o DAO pode ser
+			// utilizado mais de uma vez na mesma operaï¿½ï¿½o.
+			// A conexï¿½o serï¿½ fechada no Programa.
 		}
 	}
 
@@ -140,7 +140,7 @@ public class SellerDaoJDBC implements SellerDao {
 		obj.setName(rs.getString("Name"));
 		obj.setEmail(rs.getString("Email"));
 		obj.setBaseSalary(rs.getDouble("BaseSalary"));
-		obj.setBirthDate(rs.getDate("BirthDate"));
+		obj.setBirthDate(new java.util.Date(rs.getTimestamp("BirthDate").getTime())); 
 		obj.setDepartment(dep);
 		return obj;
 	}
@@ -186,9 +186,9 @@ public class SellerDaoJDBC implements SellerDao {
 		} finally {
 			DB.closeStatement(st);
 			DB.closeResultSet(rs);
-			// Não fecha a conexão, pois o DAO pode ser
-			// utilizado mais de uma vez na mesma operação.
-			// A conexão será fechada no Programa.
+			// Nï¿½o fecha a conexï¿½o, pois o DAO pode ser
+			// utilizado mais de uma vez na mesma operaï¿½ï¿½o.
+			// A conexï¿½o serï¿½ fechada no Programa.
 		}
 	}
 
@@ -229,9 +229,9 @@ public class SellerDaoJDBC implements SellerDao {
 		} finally {
 			DB.closeStatement(st);
 			DB.closeResultSet(rs);
-			// Não fecha a conexão, pois o DAO pode ser
-			// utilizado mais de uma vez na mesma operação.
-			// A conexão será fechada no Programa.
+			// Nï¿½o fecha a conexï¿½o, pois o DAO pode ser
+			// utilizado mais de uma vez na mesma operaï¿½ï¿½o.
+			// A conexï¿½o serï¿½ fechada no Programa.
 		}
 		
 	}
